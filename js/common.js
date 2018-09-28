@@ -32,11 +32,9 @@ $(document).ready(function(){
 
     $("#open_modalsp").click(function(){
         $("#sp_modal").slideDown(500);
-        $('body').css('overflow', 'hidden');
     });
     $("#close_modalsp").click(function(){
         $("#sp_modal").slideUp(500);
-        $('body').css('overflow', 'unset');
     });
 
 });

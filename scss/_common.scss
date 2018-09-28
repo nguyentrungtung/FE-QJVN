@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -26,12 +28,59 @@ ul {
     list-style: none;
 }
 
-.clearfix::after {
-    clear: both;
-}
-
 body {
     font-size: 14px;
     line-height: 1.5em;
     overflow-x: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.main__content {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    min-height: -webkit-calc(100vh - 221px);
+    min-height: -moz-calc(100vh - 221px);
+    min-height: -ms-calc(100vh - 221px);
+    min-height: calc(100vh - 221px);
+}
+
+.page_title {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 40px;
+    color: $red_pri;
+    font-family: bariol_bold, bariol_boldvn;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: -30px;
+        width: 96px;
+        height: 5px;
+        background: #f2eacf;
+    }
+}
+
+.main__title {
+    margin: 0;
+    font-size: 36px;
+    font-family: bariol_bold, bariol_boldvn;
+}
+
+@media only screen and (max-width: 991px) {
+    .main__content {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        min-height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
 }
