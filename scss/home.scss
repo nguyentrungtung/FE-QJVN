@@ -1,0 +1,37 @@
+@import 'common';
+@import 'variables';
+@import 'header';
+@import 'footer';
+
+.header {
+    background: transparent;
+}
+
+.main {
+    overflow: hidden;
+    margin-bottom: -6px;
+
+    .slide_item {
+        padding: 161px 0 50px;
+        /*min-height: 872px;*/
+        height: calc(100vh - 72px);
+        background-size: cover;
+    }
+
+    &__hotnews {
+        background: url(../img/main_background_01.jpg) no-repeat;
+    }
+
+    &__notice {
+        background: url(../img/main_background_02.jpg) no-repeat;
+    }
+
+    &__product {
+        background: url(../img/main_background_03.jpg) no-repeat;
+    }
+
+    .list_slide {
+        margin-bottom: 0;
+        z-index: -1;
+    }
+}

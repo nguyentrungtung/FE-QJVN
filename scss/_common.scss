@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+a, button, input[type='submit'] {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.5em;
+    overflow-x: hidden;
+}

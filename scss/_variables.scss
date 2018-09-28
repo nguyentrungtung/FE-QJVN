@@ -1,0 +1,22 @@
+/* font family */
+@font-face {
+    font-family: bariol_reg;
+    src: url(../lib/fonts/Bariol_Regular.otf);
+}
+@font-face {
+    font-family: bariol_bold;
+    src: url(../lib/fonts/Bariol_Bold.otf);
+}
+@font-face {
+    font-family: bariol_regvn;
+    src: url(../lib/fonts/SVN-Bariol_Regular.otf);
+}
+@font-face {
+    font-family: bariol_boldvn;
+    src: url(../lib/fonts/SVN-Bariol_Bold.otf);
+}
+
+/* colors */
+$red_pri : #800700;
+$foot_bg : #231f20;
+$yellow_pri : #d3b961;
