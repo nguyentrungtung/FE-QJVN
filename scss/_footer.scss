@@ -1,7 +1,14 @@
 .footer {
     font-family: bariol_bold, bariol_boldvn;
     background: $foot_bg;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    & > div {
+        position: relative;
+    }
 
     &__mess {
         background: transparent;
@@ -79,10 +86,6 @@
                     /*color: #7b6c41;*/
                     color: $yellow_pri;
                     font-size: 16px;
-                }
-
-                &:first-child a {
-                    padding-left: 0;
                 }
             }
 

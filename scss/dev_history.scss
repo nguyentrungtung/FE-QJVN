@@ -1,0 +1,152 @@
+@import 'common';
+@import 'variables';
+@import 'header';
+@import 'footer';
+
+.header {
+    background: url(../img/main_background_01.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.main {
+    margin-top: 161px;
+    font-family: bariol_reg, bariol_regvn;
+    position: relative;
+        
+    &__list {
+        position: relative;
+
+        li {
+            padding: 35px 0;
+            position: relative;
+
+            .year {
+                padding: 10px 30px;
+                background: $red_pri;
+                position: absolute;
+                top: 0;
+                display: inline-block;
+                -ms-transform: skewX(20deg);
+                -moz-transform: skewX(20deg);
+                -webkit-transform: skewX(20deg);
+                transform: skewX(20deg);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 5px;
+
+                span {
+                    font-family: bariol_bold, bariol_boldvn;
+                    font-size: 20px;
+                    color: $yellow_pri;
+                    display: inline-block;
+                    -ms-transform: skewX(-20deg);
+                    -moz-transform: skewX(-20deg);
+                    -webkit-transform: skewX(-20deg);
+                    transform: skewX(-20deg);
+                }
+            }
+
+            .info {
+                font-size: 16px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $yellow_pri;
+                    border-radius: 50%;
+                    background: $red_pri;
+                }
+
+                button {
+                    color: $red_pri;
+                    font-family: bariol_bold, bariol_boldvn;
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        li:nth-child(2n+1) .year {
+            left: calc(50% - 165px);
+        }
+
+        li:nth-child(2n) .year {
+            right: calc(50% - 165px);
+        }
+
+        li:nth-child(2n+1) .info {
+            float: right;
+            padding-left: 50px;
+            text-align: left;
+
+            &::after {
+                left: -12px;
+            }
+        }
+
+        li:nth-child(2n) .info {
+            float: left;
+            padding-right: 50px;
+            text-align: right;
+
+            &::after {
+                right: -12px;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border: 1px solid $red_pri;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &__list {
+
+            li {
+                float: none;
+                padding: 0;
+                margin-bottom: 30px;
+
+                .year {
+                    position: static;
+                    margin-left: 50px;
+                    margin-bottom: 15px;
+                }
+
+                .info {
+                    padding: 0 15px 0 50px !important;
+
+                    p {
+                        text-align: left;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 4px !important;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &::after {
+                left: 0;
+            }
+        }
+    }
+}

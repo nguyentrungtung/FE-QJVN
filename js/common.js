@@ -117,6 +117,7 @@ document.write('\
 function pushFooter () {
 document.write('\
 <footer id="footer" class="footer container-fluid-width pc">\
+<div>\
 <div class="footer__mess">\
 <button><span>MESSEGER</span></button>\
 </div>\
@@ -158,6 +159,7 @@ document.write('\
 <li><a href="#">ZALO</a></li>\
 </ul>\
 </nav>\
+</div>\
 </div>\
 </footer>'
 );

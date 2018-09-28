@@ -44,7 +44,7 @@ body {
 
 .main__content {
   padding-top: 50px;
-  padding-bottom: 45px;
+  padding-bottom: 105px;
   min-height: -webkit-calc(100vh - 221px);
   min-height: -moz-calc(100vh - 221px);
   min-height: -ms-calc(100vh - 221px);
@@ -344,7 +344,12 @@ body {
 .footer {
   font-family: bariol_bold, bariol_boldvn;
   background: #231f20;
-  position: relative; }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .footer > div {
+    position: relative; }
   .footer__mess {
     background: transparent;
     width: 100%;
@@ -405,8 +410,6 @@ body {
     /*color: #7b6c41;*/
     color: #d3b961;
     font-size: 16px; }
-  .footer .navbar-inverse .navbar-nav li:first-child a {
-    padding-left: 0; }
   .footer .navbar-inverse .navbar-nav .open a {
     color: #000000;
     background: transparent;
