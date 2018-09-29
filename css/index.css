@@ -483,7 +483,6 @@ body {
     background: transparent;
     padding-top: 5px; }
   .footer .navbar-inverse .navbar-nav li a {
-    /*color: #7b6c41;*/
     color: #d3b961;
     font-size: 16px; }
   .footer .navbar-inverse .navbar-nav li:first-child a {
@@ -661,6 +660,24 @@ body {
     background-size: cover; }
   .main .list_slide {
     margin-bottom: 0; }
+  .main .slick-next {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    z-index: 5;
+    width: 22px;
+    height: 42px;
+    background: url(../img/main_next_slide_btn.png) no-repeat;
+    background-size: 22px 42px; }
+  .main .slick-prev {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+    z-index: 5;
+    width: 22px;
+    height: 42px;
+    background: url(../img/main_prev_slide_btn.png) no-repeat;
+    background-size: 22px 42px; }
   @media only screen and (max-width: 991px) {
     .main .slide_item {
       padding: 161px 0 100px;
@@ -680,6 +697,58 @@ body {
       width: -moz-calc(100vw + 100px);
       width: -webkit-calc(100vw + 100px);
       width: calc(100vw + 100px);
-      left: -200px; } }
+      left: -200px; }
+    .main .slide_item {
+      padding: 160px 0 80px 0;
+      height: -ms-calc(100vh - 3px);
+      height: -moz-calc(100vh - 3px);
+      height: -webkit-calc(100vh - 3px);
+      height: calc(100vh - 3px); }
+      .main .slide_item h3 {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 20px; }
+        .main .slide_item h3::before {
+          left: -30px; }
+      .main .slide_item h2 {
+        text-align: left; }
+      .main .slide_item span.date {
+        margin-bottom: 20px; }
+      .main .slide_item img {
+        width: 30%;
+        height: auto;
+        margin: 15px 0; }
+      .main .slide_item p {
+        margin-bottom: 20px; }
+      .main .slide_item div button.back {
+        margin-right: 20px; }
+      .main .slide_item div i.arrow {
+        width: 30px; }
+        .main .slide_item div i.arrow::after {
+          width: 23px; }
+      .main .slide_item div span.page {
+        margin: 0 13px 0 20px; }
+        .main .slide_item div span.page.sum {
+          margin: 0 20px 0 13px; }
+      .main .slide_item div button.next {
+        margin-left: 20px; }
+      .main .slide_item .container {
+        height: 100%;
+        position: relative; }
+    .main__content {
+      width: -webkit-calc(100% - 15px);
+      width: -moz-calc(100% - 15px);
+      width: -ms-calc(100% - 15px);
+      width: calc(100% - 15px);
+      max-width: 350px;
+      padding: 0;
+      padding-right: 15px;
+      left: 15px; }
+    .main .slick-next {
+      top: unset;
+      bottom: 15px; }
+    .main .slick-prev {
+      top: unset;
+      bottom: 15px; } }
 
 /*# sourceMappingURL=index.css.map */

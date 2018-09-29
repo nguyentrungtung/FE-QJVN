@@ -3,6 +3,9 @@ $(document).ready(function(){
         dots: false,
         autoplay: true,
         autoplaySpeed: 5000,
-        arrows: false
+        arrows: true,
     });
+
+    $(".slick-next").html("");
+    $(".slick-prev").html("");
 });

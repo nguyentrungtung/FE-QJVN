@@ -194,6 +194,28 @@
         margin-bottom: 0;
     }
 
+    .slick-next {
+        position: fixed;
+        top: 50%;
+        right: 15px;
+        z-index: 5;
+        width: 22px;
+        height: 42px;
+        background: url(../img/main_next_slide_btn.png) no-repeat;
+        background-size: 22px 42px;
+    }
+
+    .slick-prev {
+        position: fixed;
+        top: 50%;
+        left: 15px;
+        z-index: 5;
+        width: 22px;
+        height: 42px;
+        background: url(../img/main_prev_slide_btn.png) no-repeat;
+        background-size: 22px 42px;
+    }
+
     @media only screen and (max-width: 991px) {
 
         .slide_item {
@@ -221,6 +243,96 @@
             width: -webkit-calc(100vw + 100px);
             width: calc(100vw + 100px);
             left: -200px;
+        }
+
+        .slide_item {
+            padding: 160px 0 80px 0;
+            height: -ms-calc(100vh - 3px);
+            height: -moz-calc(100vh - 3px);
+            height: -webkit-calc(100vh - 3px);
+            height: calc(100vh - 3px);
+
+            h3 {
+                font-size: 14px;
+                position: relative;
+                margin-bottom: 20px;
+
+                &::before {
+                    left: -30px;
+                }
+            }
+
+            h2 {
+                text-align: left;
+            }
+
+            span.date {
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 30%;
+                height: auto;
+                margin: 15px 0;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            div {
+
+                button.back {
+                    margin-right: 20px;
+                }
+
+                i.arrow {
+                    width: 30px;
+                        
+                    &::after {
+                        width: 23px;
+                    }
+
+                }
+
+                span.page {
+                    margin: 0 13px 0 20px;
+
+                    &.sum {
+                        margin: 0 20px 0 13px;
+                    }
+                }
+
+                button.next {
+                    margin-left: 20px;
+                }
+            }
+
+            .container {
+                height: 100%;
+                position: relative;
+            }
+        }
+
+        &__content {
+            width: -webkit-calc(100% - 15px);
+            width: -moz-calc(100% - 15px);
+            width: -ms-calc(100% - 15px);
+            width: calc(100% - 15px);
+            max-width: 350px;
+            padding: 0;
+            padding-right: 15px;
+            left: 15px;
+        }
+
+        .slick-next {
+            top: unset;
+            bottom: 15px;
+        }
+
+        .slick-prev {
+            top: unset;
+            bottom: 15px;
         }
     }
 }

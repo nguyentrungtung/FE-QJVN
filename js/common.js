@@ -36,11 +36,15 @@ $(document).ready(function(){
     $("#close_modalsp").click(function(){
         $("#sp_modal").slideUp(500);
     });
+    
+    // $("#footer").find(".dropdown-toggle").click(function(){
+    //     $("#footer .footer_menu > li > a").css("color", "#7b6c41");
+    //     $(this).css("color", "#d3b961");
+    // });
 
-    // $curent = $("#footer").find(".dropdown");
-    $("#footer").find(".dropdown").click(function(){
-        alert("ok");
-    });
+    // $(window).click(function(){
+    //     $("#footer .footer_menu > li > a").css("color", "#d3b961");
+    // });
 
 });
 
