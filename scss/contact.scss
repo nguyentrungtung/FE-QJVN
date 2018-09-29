@@ -1,0 +1,60 @@
+@import 'common';
+@import 'variables';
+@import 'header';
+@import 'footer';
+
+.header {
+    background: url(../img/main_background_01.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.main {
+    margin-top: 161px;
+    font-family: bariol_reg, bariol_regvn;
+    position: relative;
+    
+    &__map {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content:last-child {
+        padding-top: 85px;
+        .title {
+            font-family: bariol_bold, bariol_boldvn;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            font-size: 18px;
+            margin-bottom: 33px;
+        }
+
+        .about {
+            font-size: 18px;
+
+            strong {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        &__content {
+            min-height: auto;
+        }
+
+        &__content:first-child {
+            margin-bottom: 0;
+        }
+
+        &__content:last-child {
+            padding-top: 30px;
+        }
+    }
+}

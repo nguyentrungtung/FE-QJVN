@@ -27,6 +27,10 @@ a, button, input[type='submit'] {
 a {
   text-decoration: none; }
 
+a:focus {
+  text-decoration: none;
+  out-line: none; }
+
 button {
   border: none;
   background: transparent; }
@@ -38,6 +42,9 @@ body {
   font-size: 14px;
   line-height: 1.5em;
   overflow-x: hidden; }
+
+.main {
+  overflow: hidden; }
 
 .clearfix::after {
   clear: both; }
@@ -72,9 +79,9 @@ body {
   font-size: 36px;
   font-family: bariol_bold, bariol_boldvn; }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
   .main__content {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
     min-height: auto; } }
 /* font family */
@@ -480,6 +487,8 @@ body {
       .main .list_product li .info {
         text-align: justify;
         margin-bottom: 0; }
+        .main .list_product li .info a {
+          color: #000000; }
       .main .list_product li .time {
         font-family: bariol_reg, bariol_regvn;
         font-size: 14px;
@@ -496,7 +505,8 @@ body {
         bottom: 16px; }
   .main .actions {
     font-size: 16px;
-    font-family: bariol_bold, bariol_boldvn; }
+    font-family: bariol_bold, bariol_boldvn;
+    text-align: center; }
     .main .actions button.back {
       margin-right: 25px; }
     .main .actions i.arrow {
@@ -576,19 +586,17 @@ body {
       padding-top: 30px; }
     .main .list_product {
       margin-bottom: 30px; }
-    .main .actions {
-      text-align: center; }
-      .main .actions button.back {
-        margin-right: 20px; }
-      .main .actions i.arrow {
-        width: 30px; }
-        .main .actions i.arrow::after {
-          width: 23px; }
-      .main .actions span.page {
-        margin: 0 13px 0 20px; }
-        .main .actions span.page.sum {
-          margin: 0 20px 0 13px; }
-      .main .actions button.next {
-        margin-left: 20px; } }
+    .main .actions button.back {
+      margin-right: 20px; }
+    .main .actions i.arrow {
+      width: 30px; }
+      .main .actions i.arrow::after {
+        width: 23px; }
+    .main .actions span.page {
+      margin: 0 13px 0 20px; }
+      .main .actions span.page.sum {
+        margin: 0 20px 0 13px; }
+    .main .actions button.next {
+      margin-left: 20px; } }
 
 /*# sourceMappingURL=recruitment.css.map */

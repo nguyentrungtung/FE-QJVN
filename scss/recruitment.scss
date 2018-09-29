@@ -53,6 +53,10 @@
             .info {
                 text-align: justify;
                 margin-bottom: 0;
+
+                a {
+                    color: #000000;
+                }
             }
 
             .time {
@@ -78,6 +82,7 @@
     .actions {
         font-size: 16px;
         font-family: bariol_bold, bariol_boldvn;
+        text-align: center;
 
         button.back {
             margin-right: 25px;
@@ -224,7 +229,6 @@
             margin-bottom: 30px;
         }
         .actions {
-            text-align: center;
 
             button.back {
                 margin-right: 20px;

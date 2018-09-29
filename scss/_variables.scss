@@ -20,3 +20,31 @@
 $red_pri : #800700;
 $foot_bg : #231f20;
 $yellow_pri : #d3b961;
+
+%bd-radius {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+}
+
+%img-item-pr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+%img-item {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@mixin skew($deg) {
+    -ms-transform: skewX($deg);
+    -moz-transform: skewX($deg);
+    -webkit-transform: skewX($deg);
+    transform: skewX($deg);
+}
+// using : 
+// @include skew(20deg);
+// @extend %bd-radius;
+// @extend %img-item;

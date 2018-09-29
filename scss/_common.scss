@@ -19,6 +19,11 @@ a {
     text-decoration: none;
 }
 
+a:focus {
+    text-decoration: none;
+    out-line: none;
+}
+
 button {
     border: none;
     background: transparent;
@@ -32,6 +37,10 @@ body {
     font-size: 14px;
     line-height: 1.5em;
     overflow-x: hidden;
+}
+
+.main {
+    overflow: hidden;
 }
 
 .clearfix::after {
@@ -74,13 +83,17 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-    .main__content {
-        padding-top: 50px;
-        padding-bottom: 30px;
-        min-height: auto;
-    }
+    // .main__content {
+    //     padding-top: 30px;
+    //     padding-bottom: 30px;
+    //     min-height: auto;
+    // }
 }
 
 @media only screen and (max-width: 767px) {
-
+    .main__content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        min-height: auto;
+    }
 }
