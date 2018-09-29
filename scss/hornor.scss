@@ -3,15 +3,7 @@
 @import 'header';
 @import 'footer';
 
-.header {
-    background: url(../img/main_background_01.jpg) no-repeat;
-    background-size: 100%;
-}
-
 .main {
-    margin-top: 161px;
-    font-family: bariol_reg, bariol_regvn;
-    position: relative;
     
     &__title {
         margin-bottom: 8px;
@@ -54,7 +46,7 @@
                 }
 
                 .infor {
-
+                    
                     .title {
                         margin: 0;
                         font-size: 18px;
@@ -67,10 +59,10 @@
     }
 
     &__content.right {
-        text-align: center;
         font-size: 16px;
         font-style: italic;
         padding-top: 105px;
+        text-align: center;
 
         img {
             width: 65%;
@@ -78,8 +70,35 @@
             margin-bottom: 35px;
         }
 
+        .about {
+            text-align: center;
+        }
+
         .about strong {
             font-family: bariol_bold, bariol_boldvn;
+        }
+    }
+
+    &__img {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 37.5%;
+        height: calc(100% - 160px);
+        overflow: hidden;
+        z-index: -1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 60%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: $yellow_pri;
+            @include skew(20deg);
+            z-index: -1;
         }
     }
 
@@ -118,6 +137,14 @@
                 }
             }
         }
+
+        &__img {
+
+            &::after {
+                top: -1px;
+                left: 80%;
+            }
+        }
     }
 
     @media only screen and (max-width: 767px) {
@@ -137,59 +164,87 @@
             }
         }
 
-        &__content {
-            min-height: auto;
-        }
-
-        &__content:first-child {
-            margin-bottom: 0;
+        &__content.left {
             position: relative;
+
+            .list_hornor {
+
+                li {
+                    width: -webkit-calc(100%/2 - 15px);
+                    width: -moz-calc(100%/2 - 15px);
+                    width: -ms-calc(100%/2 - 15px);
+                    width: calc(100%/2 - 15px);
+                    float: left;
+                    margin-right: 30px !important;
+                    margin-bottom: 30px;
+
+                    &:nth-child(2n) {
+                        margin-right: 0 !important;
+                    }
+
+                    &:nth-child(3n + 1) {
+                        clear: unset;
+                    }
+
+                    &:nth-child(2n + 1) {
+                        clear: both;
+                    }
+
+                    .hornor__img {
+                        width: 100%;
+                        height: -webkit-calc((100vw/2 - 30px)*658/511) !important;
+                        height: -moz-calc((100vw/2 - 30px)*658/511) !important;
+                        height: -ms-calc((100vw/2 - 30px)*658/511) !important;
+                        height: calc((100vw/2 - 30px)*658/511) !important;
+                        margin-bottom: 10px;
+                        background: #f6f5f5;
+                        padding: 20px;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+
+                    .infor {
+
+                        .title {
+                            margin: 0;
+                            font-size: 18px;
+                            font-family: bariol_bold, bariol_boldvn;
+                        }
+
+                    }
+                }
+            }
         }
 
-        &__content:last-child {
-            display: none;
-            position: absolute;
-            top: 0;
-            height: 100%;
-            z-index: 1;
-            background: #ffffff;
-        }
+        &__content.right {
+            padding: 0 15% 50px;
+            position: relative;
 
-        .list_product {
+            img {
+                width: 50%;
+            }
 
-            li {
-                width: -webkit-calc(100%/2 - 15px);
-                width: -moz-calc(100%/2 - 15px);
-                width: -ms-calc(100%/2 - 15px);
-                width: calc(100%/2 - 15px);
-                margin-right: 30px;
-                
-                &:nth-child(3n) {
-                    margin-right: 30px;
-                }
-
-                &:nth-child(2n) {
-                    margin-right: 0;
-                }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 70%;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: $yellow_pri;
+                @include skew(20deg);
+                z-index: -1;
             }
         }
 
         &__img {
-            height: 78px;
-        }
-
-        &__buttonsp {
-            display: block;
-            font-size: 14px;
-            font-family: bariol_bold, bariol_boldvn;
-            color: $red_pri;
-            position: absolute;
-            top: 27px;
-            right: 15px;
-
-            span {
-                margin-left: 5px;
-            }
+            display: none;
         }
     }
 }

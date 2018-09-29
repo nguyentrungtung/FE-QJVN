@@ -3,15 +3,7 @@
 @import 'header';
 @import 'footer';
 
-.header {
-    background: url(../img/main_background_01.jpg) no-repeat;
-    background-size: 100%;
-}
-
 .main {
-    margin-top: 161px;
-    font-family: bariol_reg, bariol_regvn;
-    position: relative;
         
     &__list {
         position: relative;
@@ -26,24 +18,15 @@
                 position: absolute;
                 top: 0;
                 display: inline-block;
-                -ms-transform: skewX(20deg);
-                -moz-transform: skewX(20deg);
-                -webkit-transform: skewX(20deg);
-                transform: skewX(20deg);
-                border-top-left-radius: 5px;
-                border-top-right-radius: 10px;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 5px;
+                @include skew(20deg);
+                @extend %bd-radius;
 
                 span {
                     font-family: bariol_bold, bariol_boldvn;
                     font-size: 20px;
                     color: $yellow_pri;
                     display: inline-block;
-                    -ms-transform: skewX(-20deg);
-                    -moz-transform: skewX(-20deg);
-                    -webkit-transform: skewX(-20deg);
-                    transform: skewX(-20deg);
+                    @include skew(-20deg);
                 }
             }
 
@@ -112,6 +95,7 @@
     }
 
     @media only screen and (max-width: 767px) {
+        
         &__list {
 
             li {
@@ -129,7 +113,7 @@
                     padding: 0 15px 0 50px !important;
 
                     p {
-                        text-align: left;
+                        text-align: justify;
                     }
 
                     &::after {

@@ -45,11 +45,8 @@
                     top: -8px;
                     width: 20px;
                     height: 36px;
-                    border-top-left-radius: 7px;
-                    -ms-transform: skewX(-40deg);
-                    -moz-transform: skewX(-40deg);
-                    -webkit-transform: skewX(-40deg);
-                    transform: skewX(-40deg);
+                    border-top-left-radius: 10px;
+                    @include skew(-20deg);
                     background: $red_pri;
                 }
 
@@ -86,6 +83,10 @@
                     /*color: #7b6c41;*/
                     color: $yellow_pri;
                     font-size: 16px;
+                }
+
+                &:first-child a {
+                    padding-left: 0;
                 }
             }
 
@@ -133,7 +134,7 @@
                 float: left;
 
                 a {
-                    padding: 12px 15px;
+                    padding: 12px 15px !important;
                     color: #000000;
                 }
             }

@@ -5,10 +5,16 @@
 
 .header {
     background: transparent;
+
+    &::before {
+        display: none;;
+    }
 }
+
 
 .main {
     margin-bottom: -6px;
+    margin-top: 0px;
 
     .slide_item {
         padding: 161px 0 80px;
@@ -152,14 +158,11 @@
         position: absolute;
         width: 60%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.3);
         top: 0;
         left: -200px;
-        -ms-transform: skewX(20deg);
-        -moz-transform: skewX(20deg);
-        -webkit-transform: skewX(20deg);
-        transform: skewX(20deg);
-        box-shadow: 20px 0 0 0 rgba(0, 0, 0, 0.2), 40px 0 0 0 rgba(0, 0, 0, 0.2);
+        @include skew(20deg);
+        box-shadow: 20px 0 0 0 rgba(0, 0, 0, 0.1), 40px 0 0 0 rgba(0, 0, 0, 0.1);
     }
 
     &__content {
@@ -192,6 +195,7 @@
     }
 
     @media only screen and (max-width: 991px) {
+
         .slide_item {
             padding: 161px 0 100px;
             height: -ms-calc(100vh - 3px);
@@ -210,6 +214,7 @@
     }
 
     @media only screen and (max-width: 767px) {
+
         &__mask {
             width: -ms-calc(100vw + 100px);
             width: -moz-calc(100vw + 100px);

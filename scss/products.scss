@@ -3,15 +3,7 @@
 @import 'header';
 @import 'footer';
 
-.header {
-    background: url(../img/main_background_01.jpg) no-repeat;
-    background-size: 100%;
-}
-
 .main {
-    margin-top: 161px;
-    font-family: bariol_reg, bariol_regvn;
-    position: relative;
     
     &__title {
         margin-bottom: 8px;
@@ -32,17 +24,17 @@
 
                 &:nth-child(3n) {
                     margin-right: 0;
-
-                    &::after {
-                        clear: both;
-                    }
                 }
 
-                &.current .main__img {
+                &:nth-child(3n + 1) {
+                    clear: both;
+                }
+
+                &:hover .main__img {
                     border: 1px solid $yellow_pri;
                 }
 
-                &.current .main__infor {
+                &:hover .main__infor {
                     color: $red_pri;
                 }
 
@@ -62,12 +54,8 @@
         height: 140px;
         margin-bottom: 10px;
         background: #f6f5f5;
-        /*position: relative;*/
 
         img {
-            /*position: absolute;*/
-            /*left: 50%;*/
-            /*right: 50%;*/
             max-width: 100%;
             max-height: 100%;
             width: auto;
@@ -92,6 +80,7 @@
     .list_title {
         font-size: 22px;
         font-family: bariol_bold, bariol_boldvn;
+        text-align: left;
     }
 
     .list_other {
@@ -108,12 +97,14 @@
     }
 
     @media only screen and (max-width: 1199px) {
+
         &__img {
             height: 108px;
         }
     }
 
     @media only screen and (max-width: 991px) {
+        
         &__img {
             height: 78px;
         }
@@ -134,10 +125,6 @@
                 background: url(../img/product_list_close_icon.png);
                 background-size: 20px;
             }
-        }
-
-        &__content {
-            min-height: auto;
         }
 
         &__content:first-child {
@@ -167,15 +154,26 @@
                     margin-right: 30px;
                 }
 
+                &:nth-child(3n + 1) {
+                    clear: unset;
+                }
+
                 &:nth-child(2n) {
                     margin-right: 0;
                 }
+
+                &:nth-child(2n + 1) {
+                    clear: both;
+                }
+                
             }
         }
 
         &__img {
-            height: 78px;
-        }
+            height: -webkit-calc((100vw/2 - 30px)*140/224) !important;
+            height: -moz-calc((100vw/2 - 30px)*140/224) !important;
+            height: -ms-calc((100vw/2 - 30px)*140/224) !important;
+            height: calc((100vw/2 - 30px)*140/224) !important;        }
 
         &__buttonsp {
             display: block;
@@ -185,6 +183,7 @@
             position: absolute;
             top: 27px;
             right: 15px;
+            z-index: 1;
 
             span {
                 margin-left: 5px;

@@ -3,15 +3,7 @@
 @import 'header';
 @import 'footer';
 
-.header {
-    background: url(../img/main_background_01.jpg) no-repeat;
-    background-size: 100%;
-}
-
 .main {
-    margin-top: 161px;
-    font-family: bariol_reg, bariol_regvn;
-    position: relative;
     
     &__title {
         margin-bottom: 15px;
@@ -19,10 +11,6 @@
 
     &__infors {
         font-size: 16px;
-
-        p {
-            text-align : justify;
-        }
     }
 
     .list_questions {
@@ -33,10 +21,8 @@
             border-bottom: 2px solid #e7e8e9;
             padding: 16px 0;
             position: relative;
-            text-align: justify;
 
             a {
-                text-align: justify;
                 margin-bottom: 0;
                 color: #919191;
             }
@@ -125,7 +111,12 @@
         }
     }
 
+    &__buttonsp {
+        display: none;
+    }
+
     @media only screen and (max-width: 1199px) {
+
         .actions {
 
             button.back {
@@ -156,6 +147,7 @@
     }
 
     @media only screen and (max-width: 991px) {
+
         .actions {
 
             button.back {
@@ -187,16 +179,33 @@
 
     @media only screen and (max-width: 767px) {
 
-        &__content {
-            min-height: auto;
+        .page_title.sp {
+            position: relative;
+            
+            button {
+                position: absolute;
+                right: 0;
+                top: -5px;
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url(../img/product_list_close_icon.png);
+                background-size: 20px;
+            }
         }
 
         &__content:first-child {
             margin-bottom: 0;
+            position: relative;
         }
 
         &__content:last-child {
-            padding-top: 30px;
+            display: none;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+            background: #ffffff;
         }
 
         .list_questions {
@@ -228,6 +237,21 @@
 
             button.next {
                 margin-left: 20px;
+            }
+        }
+
+        &__buttonsp {
+            display: block;
+            font-size: 14px;
+            font-family: bariol_bold, bariol_boldvn;
+            color: $red_pri;
+            position: absolute;
+            top: 27px;
+            right: 15px;
+            z-index: 1;
+
+            span {
+                margin-left: 5px;
             }
         }
     }

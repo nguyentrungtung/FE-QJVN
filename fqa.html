@@ -7,13 +7,12 @@
     <title>QUANJIAN WEB</title>
 
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="lib/css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/fqa.css">
 
     <script src="lib/js/jquery-3.3.1.min.js"></script>
-    <script src="lib/js/slick.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/fqa.js"></script>
 </head>
 <body>
 
@@ -22,13 +21,15 @@
         pushHeader();
     </script>
     <!-- /header -->
-    
+
     <!-- main -->
     <main id="main" class="main container-fluid-width">
         
         <section class="container">
             <div class="row">
                 <div class="main__content col col-xs-12 col-sm-8">
+
+                    <button id="open_question" class="main__buttonsp">QESTIONS<span class="glyphicon glyphicon-chevron-down"></span></button>
 
                     <h1 class="page_title">ANSWER</h1>
 
@@ -43,9 +44,9 @@
                     
                 </div>
 
-                <div class="main__content col col-xs-12 col-sm-4">
+                <div id="list_question" class="main__content col col-xs-12 col-sm-4">
 
-                    <h1 class="page_title">QUESTIONS</h1>
+                    <h1 class="page_title sp">QUESTIONS<button id="close_question"></button></h1>
 
                     <ul class="list_questions">
                         <li class="actived">

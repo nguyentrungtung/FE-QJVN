@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 *:focus {
@@ -39,8 +40,24 @@ body {
     overflow-x: hidden;
 }
 
+.header::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 3px;
+    left: -20%;
+    width: 50%;
+    height: 157px;
+    @include skew(20deg);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 0 0 0 rgba(0, 0, 0, 0.1), 40px 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
 .main {
     overflow: hidden;
+    margin-top: 160px;
+    font-family: bariol_reg, bariol_regvn;
+    position: relative;
 }
 
 .clearfix::after {
@@ -63,6 +80,7 @@ body {
     color: $red_pri;
     font-family: bariol_bold, bariol_boldvn;
     position: relative;
+    text-align: left;
 
     &::before {
         content: "";
@@ -80,17 +98,15 @@ body {
     margin: 0;
     font-size: 36px;
     font-family: bariol_bold, bariol_boldvn;
+    text-align: left;
 }
 
-@media only screen and (max-width: 991px) {
-    // .main__content {
-    //     padding-top: 30px;
-    //     padding-bottom: 30px;
-    //     min-height: auto;
-    // }
+.title {
+    text-align: left;
 }
 
 @media only screen and (max-width: 767px) {
+
     .main__content {
         padding-top: 30px;
         padding-bottom: 30px;

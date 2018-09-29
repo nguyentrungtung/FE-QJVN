@@ -37,6 +37,11 @@ $(document).ready(function(){
         $("#sp_modal").slideUp(500);
     });
 
+    // $curent = $("#footer").find(".dropdown");
+    $("#footer").find(".dropdown").click(function(){
+        alert("ok");
+    });
+
 });
 
 
