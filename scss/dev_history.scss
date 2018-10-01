@@ -18,8 +18,6 @@
                 position: absolute;
                 top: 0;
                 display: inline-block;
-                @include skew(20deg);
-                @extend %bd-radius;
 
                 span {
                     font-family: bariol_bold, bariol_boldvn;
@@ -57,10 +55,22 @@
 
         li:nth-child(2n+1) .year {
             left: calc(50% - 165px);
+            @include skew(20deg);
+            @extend %bd-radius;
+
+            span {
+                @include skew(-20deg);
+            }
         }
 
         li:nth-child(2n) .year {
             right: calc(50% - 165px);
+            @include skew(-20deg);
+            @extend %bd-radius-right;
+
+            span {
+                @include skew(20deg);
+            }
         }
 
         li:nth-child(2n+1) .info {

@@ -37,14 +37,20 @@ $(document).ready(function(){
         $("#sp_modal").slideUp(500);
     });
     
-    // $("#footer").find(".dropdown-toggle").click(function(){
-    //     $("#footer .footer_menu > li > a").css("color", "#7b6c41");
-    //     $(this).css("color", "#d3b961");
-    // });
+    $("#footer").find(".dropdown-toggle").click(function(){
+        console.log($(this).attr('aria-expanded'));
+        if($(this).attr('aria-expanded') == true){
+            $("#footer .footer_menu > li > a").css("color", "#d3b961");
+        }
+        else{
+            $("#footer .footer_menu > li > a").css("color", "#7b6c41");
+            $(this).css("color", "#d3b961");
+        }
+    });
 
-    // $(window).click(function(){
-    //     $("#footer .footer_menu > li > a").css("color", "#d3b961");
-    // });
+    $(window).click(function(){
+        $("#footer .footer_menu > li > a").css("color", "#d3b961");
+    });
 
 });
 

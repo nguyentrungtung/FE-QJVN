@@ -17,7 +17,7 @@
     margin-top: 0px;
 
     .slide_item {
-        padding: 161px 0 80px;
+        padding: 161px 0 60px;
         height: -ms-calc(100vh - 60px);
         height: -moz-calc(100vh - 60px);
         height: -webkit-calc(100vh - 60px);
@@ -30,7 +30,8 @@
         h3 {
             font-size: 14px;
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 4.5vh;
+            text-align: left;
 
             &::before {
                 content: "";
@@ -47,6 +48,7 @@
         h2 {
             font-size: 28px;
             margin-bottom: 0;
+            text-align: left;
         }
 
         span.date {
@@ -54,7 +56,7 @@
             color: #d3b961;
             position: relative;
             display: block;
-            margin-bottom: 30px;
+            margin-bottom: 3vh;
 
             &::before {
                 content: "";
@@ -68,15 +70,15 @@
         }
 
         img {
-            width: 240px;
+            width: 20vh;
             height: auto;
-            margin: 25px 0;
+            margin: 2vh 0;
         }
 
         p {
             font-family: bariol_reg, bariol_regvn;
             font-size: 16px;
-            margin-bottom: 55px;
+            margin-bottom: 4vh;
         }
 
         div {
@@ -158,10 +160,10 @@
         position: absolute;
         width: 60%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
         top: 0;
         left: -200px;
-        @include skew(20deg);
+        @include skew(25deg);
         box-shadow: 20px 0 0 0 rgba(0, 0, 0, 0.1), 40px 0 0 0 rgba(0, 0, 0, 0.1);
     }
 
@@ -178,16 +180,19 @@
     &__hotnews {
         background: url(../img/main_background_01.jpg) no-repeat;
         background-size: cover;
+        background-position: 50%;
     }
 
     &__notice {
         background: url(../img/main_background_02.jpg) no-repeat;
         background-size: cover;
+        background-position: 50%;
     }
 
     &__product {
         background: url(../img/main_background_03.jpg) no-repeat;
         background-size: cover;
+        background-position: 50%;
     }
 
     .list_slide {
@@ -196,7 +201,7 @@
 
     .slick-next {
         position: fixed;
-        top: 50%;
+        top: 45%;
         right: 15px;
         z-index: 5;
         width: 22px;
@@ -207,7 +212,7 @@
 
     .slick-prev {
         position: fixed;
-        top: 50%;
+        top: 45%;
         left: 15px;
         z-index: 5;
         width: 22px;
@@ -219,7 +224,6 @@
     @media only screen and (max-width: 991px) {
 
         .slide_item {
-            padding: 161px 0 100px;
             height: -ms-calc(100vh - 3px);
             height: -moz-calc(100vh - 3px);
             height: -webkit-calc(100vh - 3px);

@@ -16,6 +16,7 @@
     .breadcrumb {
         background: transparent;
         padding: 0;
+        text-align: left;
 
         li {
             font-size: 16px;
@@ -53,10 +54,22 @@
             height: 335px;
             background: transparent;
             position: relative;
-            @extend %img-item-pr;
+            position: relative;
+            overflow: hidden;
 
             img {
-                @extend %img-item;
+                position: absolute;
+                width: auto;
+                max-height: 100%;
+                max-width: 100%;
+                height: auto;
+                border: none;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             }
 
             .qr_code {
@@ -83,10 +96,22 @@
             height: 335px;
             background: transparent;
             position: relative;
-            @extend %img-item-pr;
+            position: relative;
+            overflow: hidden;
 
             img {
-                @extend %img-item;
+                position: absolute;
+                width: auto;
+                max-height: 100%;
+                max-width: 100%;
+                height: auto;
+                border: none;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             }
 
             .qr_code {
@@ -155,6 +180,7 @@
             li {
                 border: none;
                 display: inline-block;
+                text-align: left;
 
                 a {
                     border: none;
@@ -230,6 +256,31 @@
 
         &__pcshow {
             display: none;
+        }
+    }
+
+    @media only screen and (max-width: 379px) {
+        
+        &__infors {
+
+            .nav-tabs {
+
+                li {
+
+                    a {
+                        font-size: 15px;
+                        padding: 0 8px;
+                    }
+
+                    &:first-child a {
+                        padding-left: 0;
+                    }
+
+                    &:last-child a {
+                        padding-right: 0;
+                    }
+                }
+            }
         }
     }
 }

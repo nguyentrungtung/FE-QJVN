@@ -28,14 +28,11 @@ $yellow_pri : #d3b961;
     border-bottom-right-radius: 5px;
 }
 
-%img-item-pr {
-    text-align: center;
-    vertical-align: middle;
-}
-
-%img-item {
-    max-height: 100%;
-    max-width: 100%;
+%bd-radius-right {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
 }
 
 @mixin skew($deg) {
@@ -47,7 +44,7 @@ $yellow_pri : #d3b961;
 
 
 %header_menu_active {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.4);
     border: 2px solid $red_pri;
     @extend %bd-radius;
     @include skew(20deg);

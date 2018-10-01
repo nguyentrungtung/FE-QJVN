@@ -104,7 +104,7 @@
             .navbar-nav {
 
                 li {
-                    margin-top: 3px;
+                    margin-top: 7px;
 
                     a {
                         color: #000000;
@@ -144,7 +144,7 @@
     &__search {
         margin-top: 3px;
         margin-left: 10px;
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.4);
         @include skew(20deg);
         border: 2px solid $red_pri;
         overflow: hidden;
@@ -165,15 +165,21 @@
             float: left;
             @include skew(-20deg);
             z-index: 4;
+            background: transparent;
+
+            &::placeholder {
+                color: $red_pri;
+            }
         }
 
         button {
             float: left;
             position: absolute;
-            right: 15px;
-            top: 9px;
+            right: 5px;
+            top: 0px;
             @include skew(-20deg);
             z-index: 3;
+            padding: 7px 10px 9px;
         }
 
         &.show {
