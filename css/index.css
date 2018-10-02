@@ -666,7 +666,7 @@ body {
   .main__product {
     background: url(../img/main_background_03.jpg) no-repeat;
     background-size: cover;
-    background-position: 50%; }
+    background-position: 75%; }
   .main .list_slide {
     margin-bottom: 0; }
   .main .slick-next {
