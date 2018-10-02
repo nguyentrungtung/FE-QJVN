@@ -419,7 +419,11 @@ body {
   @media only screen and (max-width: 767px) {
     .header {
       background: url(../img/header_background_sp.jpg) no-repeat;
-      background-size: 100%; } }
+      background-size: 100%; }
+    .header__main {
+      padding-top: 15px; }
+      .header__main .navbar {
+        margin-bottom: 15px; } }
 
 .footer {
   font-family: bariol_bold, bariol_boldvn;
@@ -529,9 +533,12 @@ body {
     .footer {
       display: none; } }
 
-.main__map img {
+.main__map iframe {
   width: 100%;
-  height: auto; }
+  height: -webkit-calc(40vw*450/600);
+  height: -moz-calc(40vw*450/600);
+  height: -ms-calc(40vw*450/600);
+  height: calc(40vw*450/600); }
 .main__content:last-child {
   padding-top: 85px; }
   .main__content:last-child .title {

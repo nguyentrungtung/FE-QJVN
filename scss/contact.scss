@@ -7,9 +7,12 @@
     
     &__map {
 
-        img {
+        iframe {
             width: 100%;
-            height: auto;
+            height: -webkit-calc(40vw*450/600);
+            height: -moz-calc(40vw*450/600);
+            height: -ms-calc(40vw*450/600);
+            height: calc(40vw*450/600);
         }
     }
 
