@@ -123,10 +123,16 @@ body {
   text-align: left; }
 
 @media only screen and (max-width: 767px) {
+  .main {
+    margin-top: 130px; }
+
   .main__content {
     padding-top: 30px;
     padding-bottom: 30px;
-    min-height: auto; } }
+    min-height: auto; }
+
+  .header::before {
+    height: 127px; } }
 /* font family */
 @font-face {
   font-family: bariol_reg;

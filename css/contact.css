@@ -123,10 +123,16 @@ body {
   text-align: left; }
 
 @media only screen and (max-width: 767px) {
+  .main {
+    margin-top: 130px; }
+
   .main__content {
     padding-top: 30px;
     padding-bottom: 30px;
-    min-height: auto; } }
+    min-height: auto; }
+
+  .header::before {
+    height: 127px; } }
 /* font family */
 @font-face {
   font-family: bariol_reg;
@@ -555,6 +561,12 @@ body {
 @media only screen and (max-width: 767px) {
   .main__content:first-child {
     margin-bottom: 0; }
+  .main__map iframe {
+    width: 100%;
+    height: -webkit-calc((100vw - 100px)*450/600);
+    height: -moz-calc((100vw - 100px)*450/600);
+    height: -ms-calc((100vw - 100px)*450/600);
+    height: calc((100vw - 100px)*450/600); }
   .main__content:last-child {
     padding-top: 30px; } }
 

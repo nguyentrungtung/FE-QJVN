@@ -45,6 +45,17 @@
             margin-bottom: 0;
         }
 
+        &__map {
+
+            iframe {
+                width: 100%;
+                height: -webkit-calc((100vw - 100px)*450/600);
+                height: -moz-calc((100vw - 100px)*450/600);
+                height: -ms-calc((100vw - 100px)*450/600);
+                height: calc((100vw - 100px)*450/600);
+            }
+        }
+
         &__content:last-child {
             padding-top: 30px;
         }
