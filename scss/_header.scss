@@ -347,6 +347,10 @@
                         &:last-child {
                             margin-bottom: 0;
                         }
+
+                        &:hover a {
+                            color: $red_pri;
+                        }
                     }
                 }
             }
