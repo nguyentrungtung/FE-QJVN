@@ -621,7 +621,8 @@ body {
       font-size: 16px;
       margin-bottom: 4vh; }
     .main .slide_item div {
-      font-size: 16px; }
+      font-size: 16px;
+      text-align: center; }
       .main .slide_item div button.back {
         margin-right: 25px; }
       .main .slide_item div i.arrow {
@@ -720,6 +721,12 @@ body {
     height: 42px;
     background: url(../img/main_prev_slide_btn.png) no-repeat;
     background-size: 22px 42px; }
+  .main .carousel-control {
+    width: 60px;
+    height: 21px;
+    bottom: -21px;
+    top: unset;
+    opacity: 0; }
   @media only screen and (max-width: 991px) {
     .main .slide_item {
       height: -ms-calc(100vh - 3px);
