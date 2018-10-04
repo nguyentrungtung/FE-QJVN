@@ -1,5 +1,8 @@
 function writeNextPage(prnt, crt) {
-    prnt.find(".current_number").text(crt);
+    setTimeout(function(){
+        prnt.find(".current_number").text(crt);
+    },500);
+    
 }
 
 $(document).ready(function(){
@@ -34,9 +37,7 @@ $(document).ready(function(){
         if(parseInt(currentPage) == 5) {
             nextPage = "01";
         }
-
         writeNextPage(currentPrnt, nextPage);
-
     });
 
     $(".carousel-control.left").click(function(){
@@ -46,9 +47,7 @@ $(document).ready(function(){
         if(parseInt(currentPage) == 1) {
             nextPage = "05";
         }
-
         writeNextPage(currentPrnt, nextPage);
-
     });
 
 });
