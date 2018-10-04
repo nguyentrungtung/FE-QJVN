@@ -32,9 +32,17 @@ $(document).ready(function(){
 
     $("#open_modalsp").click(function(){
         $("#sp_modal").slideDown(500);
+        // $("#sp_modal").addClass("show");
     });
     $("#close_modalsp").click(function(){
         $("#sp_modal").slideUp(500);
+        // $("#sp_modal").removeClass("show");
+    });
+
+    $("#sp_modal .header__menusp > li").click(function(){
+        if($(this).children(".sub_menu").length){
+            $(this).children(".sub_menu").slideToggle(500);
+        }
     });
     
     $("#footer").find(".dropdown-toggle").click(function(){
@@ -57,6 +65,43 @@ $(document).ready(function(){
 
 function pushHeader () {
 document.write('\
+<div id="sp_modal" class="header__sp collapse">\
+<div>\
+<div class="container">\
+<button id="close_modalsp" class="header__close--btn"></button>\
+<div class="header__link">\
+<a href="#">FACEBOOK</a>\
+<a href="#">ZALO</a>\
+</div>\
+<div class="header__searchsp clearfix">\
+<input type="text" name="" placeholder="Search">\
+<button><i class="glyphicon glyphicon-search"></i></button>\
+</div>\
+<ul class="header__menusp">\
+<li><a href="#">HOME</a></li>\
+<li><a href="#">MY QUANJIAN</a></li>\
+<li><a href="#">HOME OF QUANJIAN</a>\
+<ul class="sub_menu">\
+<li><a href="#" title="">Social activities</a></li>\
+<li><a href="#" title="">Enterprise honor</a></li>\
+</ul>\
+</li>\
+<li><a href="#">NEWS</a></li>\
+<li><a href="#">RECRUITMENT</a></li>\
+<li><a href="#">PRODUCT</a></li>\
+<li><a href="#">THERAPEUTIC</a></li>\
+<li><a href="#">FQA</a></li>\
+<li><a href="#">CONTACT US</a></li>\
+</ul>\
+<ul class="header__toolsp clearfix">\
+<li><button>ENGLISH</button></li>\
+<li class="un_active"><button>VIETNAM</button></li>\
+<li><button>LOGIN</button></li>\
+</ul>\
+</div>\
+</div>\
+</div>\
+\
 <header id="header" class="header container-fluid-width">\
 <div class="header__top">\
 <ul class="header__tool container">\
@@ -95,35 +140,6 @@ document.write('\
 </div>\
 </div>\
 </nav>\
-</div>\
-<div id="sp_modal" class="header__sp collapse">\
-<div class="container">\
-<button id="close_modalsp" class="header__close--btn"></button>\
-<div class="header__link">\
-<a href="#">FACEBOOK</a>\
-<a href="#">ZALO</a>\
-</div>\
-<div class="header__searchsp clearfix">\
-<input type="text" name="" placeholder="Search">\
-<button><i class="glyphicon glyphicon-search"></i></button>\
-</div>\
-<ul class="header__menusp">\
-<li><a href="#">HOME</a></li>\
-<li><a href="#">MY QUANJIAN</a></li>\
-<li><a href="#">HOME OF QUANJIAN</a></li>\
-<li><a href="#">NEWS</a></li>\
-<li><a href="#">RECRUITMENT</a></li>\
-<li><a href="#">PRODUCT</a></li>\
-<li><a href="#">THERAPEUTIC</a></li>\
-<li><a href="#">FQA</a></li>\
-<li><a href="#">CONTACT US</a></li>\
-</ul>\
-<ul class="header__toolsp clearfix">\
-<li><button>ENGLISH</button></li>\
-<li class="un_active"><button>VIETNAM</button></li>\
-<li><button>LOGIN</button></li>\
-</ul>\
-</div>\
 </div>\
 </header>'
 );

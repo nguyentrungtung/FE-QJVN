@@ -179,7 +179,7 @@
             top: 0px;
             @include skew(-20deg);
             z-index: 3;
-            padding: 7px 10px 9px;
+            padding: 10px 10px 7px;
         }
 
         &.show {
@@ -249,22 +249,36 @@
         
         /* header modal menu on sp */
         &__sp {
-            position: fixed;
+            position: absolute;
             width: 100%;
             background: #ffffff;
             z-index: 3;
             top: 0;
             left: 0;
             height: 100vh;
+            font-family: bariol_bold, bariol_boldvn;
+            overflow-y: hidden;
+
+            & > div {
+                position: relative;
+                height: 100vh;
+                overflow-y: scroll;
+
+            }
 
             .container {
                 padding: 30px 15px;
-                position: relative;
+                
+
+                input::placeholder {
+                    color: $red_pri;
+                    font-size: 16px;
+                }
             }
         }
 
         &__close--btn {
-            position: absolute;
+            position: fixed;
             top: 30px;
             right: 15px;
             display: block;
@@ -313,17 +327,40 @@
             font-size: 18px;
 
             li {
-                margin: 6.7% 0;
+                margin: 5vh 0;
                 text-align: center;
 
                 a {
                     color: #000000;
+                }
+
+                .sub_menu {
+                    font-size: 14px;
+                    display: none;
+
+                    li {
+
+                        a {
+                            color: gray;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }
 
         &__toolsp {
             text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 15px 0;
+            background: #ffffff;
 
             li {
                 display: inline-block;
