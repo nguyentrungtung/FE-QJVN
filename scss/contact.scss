@@ -14,7 +14,7 @@
     }
 
     &__content:last-child {
-        padding-top: 85px;
+        padding-top: 75px;
         
         .title {
             font-family: bariol_bold, bariol_boldvn;
@@ -62,6 +62,10 @@
             margin-bottom: 0;
         }
 
+        &__content:last-child {
+            padding-top: 0;
+        }
+
         &__map {
 
             iframe {
@@ -70,10 +74,6 @@
                 height: -ms-calc((100vw - 100px)*450/600);
                 height: calc((100vw - 100px)*450/600);
             }
-        }
-
-        &__content:last-child {
-            padding-top: 30px;
         }
     }
 }

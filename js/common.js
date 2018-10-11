@@ -32,11 +32,12 @@ $(document).ready(function(){
 
     $("#open_modalsp").click(function(){
         $("#sp_modal").slideDown(500);
-        // $("#sp_modal").addClass("show");
+        $('body').css("overflow", 'hidden');
     });
     $("#close_modalsp").click(function(){
         $("#sp_modal").slideUp(500);
-        // $("#sp_modal").removeClass("show");
+        $('body').css("overflow", 'unset');
+        $('body').css("overflow-x", 'hidden');
     });
 
     $("#sp_modal .header__menusp > li").click(function(){
