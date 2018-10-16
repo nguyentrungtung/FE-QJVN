@@ -236,6 +236,30 @@
         display: none;
     }
 
+    @media only screen and (max-width: 991px) {
+        
+        &__infors {
+
+            .nav-tabs {
+
+                li {
+
+                    a {
+                        padding: 0 10px;
+                    }
+
+                    &:first-child a {
+                        padding-left: 0;
+                    }
+
+                    &:last-child a {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: 767px) {
         
         & > .container {

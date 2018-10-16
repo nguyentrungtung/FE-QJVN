@@ -20,7 +20,7 @@
                 width: 263px;
                 background: $red_pri;
                 text-align: right;
-                padding: 7px 0 7px 27px;
+                padding: 3px 0 6px 27px;
                 position: relative;
                 z-index: 2;
 
@@ -53,8 +53,8 @@
                     display: block;
                     position: absolute;
                     left: 0;
-                    top: 0;
-                    height: 100%;
+                    top: 4px;
+                    height: 60%;
                     border-left: 1px solid #ffffff;
                 }
 
@@ -66,7 +66,7 @@
                     left: -15px;
                     top: 0px;
                     width: 25px;
-                    height: 35px;
+                    height: 30px;
                     border-bottom-left-radius: 10px;
                     @include skew(20deg);
                 }
@@ -78,7 +78,7 @@
             display: block;
             position: absolute;
             width: 22vw;
-            height: 36px;
+            height: 31px;
             background: $red_pri;
             right: 0;
             top: 2px;
@@ -87,15 +87,15 @@
     }
 
     &__main {
-        margin-top: -28px;
+        margin-top: -30px;
         font-size: 16px;
 
         .navbar {
             border-radius: 0;
             margin: 0;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: none;
-            min-height: 97px;
+            min-height: 79px;
             background: transparent;
         }
 
@@ -130,8 +130,8 @@
         z-index: 5;
 
         img {
-            width: 75px;
-            height: 97px;
+            width: 61px;
+            height: 79px;
         }
     }
 
@@ -215,7 +215,8 @@
 
         &__main {
             margin-top: 0;
-            padding-top: 17px;
+            padding-top: 16px;
+            padding-bottom: 5px;
         }
 
         &__hamberger {
@@ -225,7 +226,7 @@
             
             &.navbar-toggle {
                 margin: 0;
-                margin-top: 35px;
+                margin-top: 25px;
                 background: transparent;
                 border: none;
                 padding: 0;
@@ -249,7 +250,7 @@
         
         /* header modal menu on sp */
         &__sp {
-            position: absolute;
+            position: fixed;
             width: 100%;
             background: #ffffff;
             z-index: 3;

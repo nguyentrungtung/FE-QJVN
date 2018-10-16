@@ -20,9 +20,12 @@
     &__img {
         position: fixed;
         bottom: 0;
-        right: 6%;
-        width: 31.5%;
-        height: calc(100% - 132px);
+        right: 3%;
+        width: 35%;
+        height: -webkit-calc(100% - 102px);
+        height: -moz-calc(100% - 102px);
+        height: -ms-calc(100% - 102px);
+        height: calc(100% - 102px);
 
         img {
             width: 100%;
@@ -74,6 +77,7 @@
             position: relative;
             width: 100%;
             height: auto;
+            right: 0;
 
             img {
                 width: 100%;
